@@ -34,8 +34,8 @@ ax.set_zlim(-100, 100)
 
 plt.show()
 """
-y = np.loadtxt("/home/andychoi/datatest/data1.txt")
-y_data2 = np.loadtxt("/home/andychoi/datatest/data2.txt")
+y = np.loadtxt("/home/andychoi/datatest/data1.txt")#순위 데이터
+y_data2 = np.loadtxt("/home/andychoi/datatest/data2.txt")#판매량 데이터
 y_data2 = np.transpose(y_data2)
 
 y =np.transpose(y)
@@ -97,7 +97,7 @@ for month in range(7) :
     if month == 6 :
         for day in range(31) :            
             day_test = np.append(day_test,20150000+600+day+1)
-
+#날짜 만들기
 """
 for l in day_test :
     cnt = 0
@@ -119,6 +119,8 @@ for l in day_test :
     file = np.transpose(file)
     np.savetxt('/home/andychoi/datatest/'+str(l)+'fitted.txt', file, delimiter='\t', newline='\r\n')
     plt.plot(x_sort,y_sort)
+    #날짜별 데이터 총 151개의 순위 별 판매량 데이터(판매하는 도서 이름과 해당 날짜가 같으면 순위 판매량을 이어주고, 같지 않거나 판매량 데이
+    #없으면 버린다.) 만들기,
 """
 index = np.array([])
 index1 =np.array([])
